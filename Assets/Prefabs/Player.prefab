@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1483851643805161410}
   - component: {fileID: 1483851643805161411}
   - component: {fileID: 8304872775776699500}
-  - component: {fileID: 8291391832443332713}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -100,24 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: {x: 720, y: 0}
   angleLimit: {x: -90, y: 60}
---- !u!114 &8291391832443332713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483851643805161408}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 784891281dd067c46bc20e08b1359bae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistance: 3
-  interactionLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  activeIndicator: {fileID: 0}
-  itemNameDisplay: {fileID: 0}
 --- !u!1 &1483851644016194410
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +113,7 @@ GameObject:
   - component: {fileID: 1483851644016194384}
   - component: {fileID: 1483851644016194389}
   - component: {fileID: 6192454856946182219}
+  - component: {fileID: 6877532789040038714}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -153,6 +135,7 @@ Transform:
   m_Children:
   - {fileID: 1483851643805161413}
   - {fileID: 5136539651969111862}
+  - {fileID: 7402362405029339756}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -334,6 +317,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerAnimator: {fileID: 1272420061171027276}
+--- !u!114 &6877532789040038714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483851644016194410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784891281dd067c46bc20e08b1359bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 1
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  interactionPoint: {fileID: 0}
+--- !u!1 &8493815401638508861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7402362405029339756}
+  m_Layer: 0
+  m_Name: InteractionPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7402362405029339756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8493815401638508861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.52, z: 0.76}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1483851644016194414}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4666326129264472285
 PrefabInstance:
   m_ObjectHideFlags: 0

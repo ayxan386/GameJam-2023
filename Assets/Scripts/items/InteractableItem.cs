@@ -7,6 +7,11 @@ public class InteractableItem : MonoBehaviour
 
     public virtual void OnUsed()
     {
-        print("Default behavior :)");
+        // DialogController.Instance.DisplayDialog("This looks interesting", 3);
+    }
+
+    public virtual void OnApproach()
+    {
+        DialogController.Instance.DisplayDialog("This looks interesting", 3);
     }
 }

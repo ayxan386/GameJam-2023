@@ -1,37 +1,30 @@
-using TMPro;
 using UnityEngine;
 
 public class ItemInteraction : MonoBehaviour
 {
     [SerializeField] private float maxDistance;
     [SerializeField] private LayerMask interactionLayer;
-    [SerializeField] private GameObject activeIndicator;
-    [SerializeField] private TextMeshProUGUI itemNameDisplay;
+    [SerializeField] private Transform interactionPoint;
 
     private InteractableItem lastItem;
 
     void Update()
     {
         if (GlobalStateManager.PlayingMiniGame) return;
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, maxDistance,
-                interactionLayer))
+        var colliders = Physics.OverlapSphere(interactionPoint.position, maxDistance, interactionLayer);
+        if (colliders != null
+            && colliders.Length > 0
+            && colliders[0].TryGetComponent(out InteractableItem item))
         {
-            if (hitInfo.collider.TryGetComponent(out InteractableItem item))
-            {
-                lastItem = item;
-                activeIndicator.SetActive(true);
-                itemNameDisplay.text = item.DisplayName;
-            }
-
-         
+            item.OnApproach();
+            lastItem = item;
         }
         else
         {
             lastItem = null;
-            activeIndicator.SetActive(false);
         }
 
-        if (Input.GetButtonDown("Use") && lastItem != null)
+        if (lastItem != null && Input.GetButtonDown("Fire1"))
         {
             lastItem.OnUsed();
         }
