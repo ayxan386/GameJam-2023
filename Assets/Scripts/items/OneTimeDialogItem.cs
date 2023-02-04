@@ -6,5 +6,7 @@ public class OneTimeDialogItem : InteractableItem
     {
         if (!wasApproached) base.OnApproach();
         wasApproached = true;
+        gameObject.layer = 0;
+        Destroy(this);
     }
 }

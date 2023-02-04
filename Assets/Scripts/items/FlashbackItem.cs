@@ -3,6 +3,7 @@ using UnityEngine;
 public class FlashbackItem : InteractableItem
 {
     [SerializeField] private string flashbackId;
+    [SerializeField] private bool folder = false;
 
     private bool wasUsed;
 

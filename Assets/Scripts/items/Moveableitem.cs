@@ -3,8 +3,10 @@ using UnityEngine;
 public class Moveableitem : OneTimeDialogItem
 {
     [SerializeField] private float forceFactor;
+    [SerializeField] private int requiredClickCount;
 
     private Rigidbody rb;
+    private int currentClickCount = 0;
 
     private void Awake()
     {
@@ -13,6 +15,9 @@ public class Moveableitem : OneTimeDialogItem
 
     public override void OnUsed()
     {
+        currentClickCount++;
+        if (currentClickCount < requiredClickCount) return;
+        currentClickCount = 0;
         var player = GameObject.Find("Player");
         if (player)
         {

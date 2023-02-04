@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class InteractableItem : MonoBehaviour
 {
+    [TextArea]
     [SerializeField] private string approachText;
     [SerializeField] private float duration;
 
