@@ -1,4 +1,4 @@
 ﻿public class GlobalStateManager
 {
-    public static bool PlayingMiniGame { get; set; }
+    public static bool FullscreenCanvas { get; set; }
 }

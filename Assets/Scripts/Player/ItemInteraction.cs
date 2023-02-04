@@ -10,7 +10,7 @@ public class ItemInteraction : MonoBehaviour
 
     void Update()
     {
-        if (GlobalStateManager.PlayingMiniGame) return;
+        if (GlobalStateManager.FullscreenCanvas) return;
         var colliders = Physics.OverlapSphere(interactionPoint.position, maxDistance, interactionLayer);
         if (colliders != null
             && colliders.Length > 0

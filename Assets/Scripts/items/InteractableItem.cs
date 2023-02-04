@@ -2,16 +2,15 @@ using UnityEngine;
 
 public class InteractableItem : MonoBehaviour
 {
-    [SerializeField] private string displayName;
-    public string DisplayName => displayName;
+    [SerializeField] private string approachText;
+    [SerializeField] private float duration;
 
     public virtual void OnUsed()
     {
-        // DialogController.Instance.DisplayDialog("This looks interesting", 3);
     }
 
     public virtual void OnApproach()
     {
-        DialogController.Instance.DisplayDialog("This looks interesting", 3);
+        DialogController.Instance.DisplayDialog(approachText, duration);
     }
 }

@@ -17,7 +17,7 @@ public class FpsCameraMovement : MonoBehaviour
 
     void Update()
     {
-        if (GlobalStateManager.PlayingMiniGame) return;
+        if (GlobalStateManager.FullscreenCanvas) return;
         var mouseMovement = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         transform.parent.Rotate(0, mouseMovement.x * mouseSensitivity.x * Time.deltaTime, 0);
 

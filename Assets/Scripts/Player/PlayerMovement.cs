@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (GlobalStateManager.PlayingMiniGame) return;
+        if (GlobalStateManager.FullscreenCanvas) return;
         var inputVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         inputVector.Normalize();
         inputVector = transform.rotation * inputVector;
