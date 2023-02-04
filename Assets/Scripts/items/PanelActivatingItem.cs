@@ -6,6 +6,15 @@ public class PanelActivatingItem : InteractableItem
     [FormerlySerializedAs("objRef")] [SerializeField]
     private GameObject panelRef;
 
+    private bool dialogDisplayed;
+
+    public override void OnApproach()
+    {
+        if (dialogDisplayed) return;
+        dialogDisplayed = true;
+        base.OnApproach();
+    }
+
     public override void OnUsed()
     {
         Cursor.visible = true;
