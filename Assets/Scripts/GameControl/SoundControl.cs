@@ -12,11 +12,11 @@ public class SoundControl : MonoBehaviour
     {
         var slider = GetComponent<Slider>();
         audioMixer.GetFloat(sfxVar, out float initialVal);
-        slider.value = Mathf.Pow(2, initialVal);
+        // slider.value = Mathf.Pow(2, initialVal);
     }
 
     public void ValueChanged(float val)
     {
-        audioMixer.SetFloat(sfxVar, Mathf.Log(val));
+        audioMixer.SetFloat(sfxVar, Mathf.Log(val) * 20);
     }
 }

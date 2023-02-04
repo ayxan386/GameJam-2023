@@ -12,23 +12,38 @@ public class ItemInteraction : MonoBehaviour
     [SerializeField] private Transform middleInteractionPoint;
     [SerializeField] private Transform lowInteractionPoint;
     [SerializeField] private GameObject canGrabbedRef;
+    [SerializeField] private Animator animator;
 
     private InteractableItem lastItem;
 
     void Update()
     {
         if (GlobalStateManager.FullscreenCanvas) return;
+        var grabDirection = "";
         if (!CheckInteraction(topInteractionPoint))
         {
             if (!CheckInteraction(middleInteractionPoint))
             {
-                CheckInteraction(lowInteractionPoint);
+                if (CheckInteraction(lowInteractionPoint))
+                {
+                    grabDirection = "grabBottom";
+                }
+            }
+            else
+            {
+                grabDirection = "grabMiddle";
             }
         }
+        else
+        {
+            grabDirection = "grabTop";
+        }
+
 
         if (lastItem != null && Input.GetButtonDown("Fire1"))
         {
             lastItem.OnUsed();
+            animator.SetTrigger(grabDirection);
         }
     }
 
