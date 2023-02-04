@@ -1881,6 +1881,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924772242}
   m_CullTransparentMesh: 1
+--- !u!1 &965153705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1483851644016194410, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
+  m_PrefabInstance: {fileID: 1093343442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &965153713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965153705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a3eb43d32d8e34c97068c007c30ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBox: {fileID: 1700809563}
+  dialogObj: {fileID: 400669018}
 --- !u!1001 &1008498548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2082,6 +2101,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 569870152985307740, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ed402f4322d8bd24096d17a0dba95b8a, type: 2}
     - target: {fileID: 1483851644016194410, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2130,6 +2153,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6029208533251976594, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ce2017a72eac7f24fa7a93bb2cee79ae, type: 2}
+    - target: {fileID: 6224996711183969679, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a764701b72a5b64cbb5dac112235d1b, type: 2}
     - target: {fileID: 6877532789040038714, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
       propertyPath: interactionPoint
       value: 
@@ -2138,10 +2169,18 @@ PrefabInstance:
       propertyPath: interactionLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 7641544077953963862, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 149e412217d1d3a439d182356b235887, type: 2}
     - target: {fileID: 8304872775776699500, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
       propertyPath: mouseSensitivity.x
       value: 360
       objectReference: {fileID: 0}
+    - target: {fileID: 8789450719379992551, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 80277bf1c5a87bf4ea0cb0889cbd3cda, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
 --- !u!4 &1093343443 stripped
@@ -3205,25 +3244,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669628941}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1687184005 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7202144855344607867, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
-  m_PrefabInstance: {fileID: 1093343442}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1687184008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687184005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67a3eb43d32d8e34c97068c007c30ccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 1700809563}
-  dialogObj: {fileID: 400669018}
 --- !u!114 &1700809563 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3389969649125405689, guid: 76828ebac83fe0e4dbf853eb1c8014ba, type: 3}
