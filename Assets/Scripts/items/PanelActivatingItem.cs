@@ -8,6 +8,10 @@ public class PanelActivatingItem : InteractableItem
 
     private bool dialogDisplayed;
 
+    public override void PreUsed()
+    {
+    }
+
     public override void OnApproach()
     {
         if (dialogDisplayed) return;

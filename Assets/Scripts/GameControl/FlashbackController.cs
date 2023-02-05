@@ -72,6 +72,7 @@ public class FlashbackController : MonoBehaviour
         {
             imageRef.sprite = image.sprite;
             yield return new WaitForSeconds(image.duration);
+            sfxSource.Play();
         }
 
         flashbackObj.SetActive(false);
