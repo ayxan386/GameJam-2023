@@ -43,9 +43,16 @@ public class ItemInteraction : MonoBehaviour
 
         if (lastItem != null && Input.GetButtonDown("Fire1"))
         {
-            animator.SetTrigger(grabDirection);
-            lastItem.PreUsed();
-            StartCoroutine(WaitForAnimation(lastItem));
+            if (lastItem is PanelActivatingItem)
+            {
+                lastItem.OnUsed();
+            }
+            else
+            {
+                animator.SetTrigger(grabDirection);
+                lastItem.PreUsed();
+                StartCoroutine(WaitForAnimation(lastItem));
+            }
         }
     }
 
