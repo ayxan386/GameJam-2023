@@ -364,6 +364,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &35491447 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2249920247659150753, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
+  m_PrefabInstance: {fileID: 1093343442}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &99269258
 GameObject:
   m_ObjectHideFlags: 0
@@ -3740,7 +3745,7 @@ PrefabInstance:
     - target: {fileID: 6877532789040038714, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 1439148438}
+      objectReference: {fileID: 35491447}
     - target: {fileID: 6877532789040038714, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
       propertyPath: canGrabbedRef
       value: 
@@ -4597,11 +4602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &1439148438 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1272420061171027276, guid: 3c5969116d379a047832fdb705d39a81, type: 3}
-  m_PrefabInstance: {fileID: 1093343442}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1462389348
 GameObject:
   m_ObjectHideFlags: 0
