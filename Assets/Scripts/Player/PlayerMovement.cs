@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (GlobalStateManager.FullscreenCanvas) return;
+        if (GlobalStateManager.FullscreenCanvas || !GlobalStateManager.CanMove) return;
         var inputVector = new Vector3(0, 0, Input.GetAxisRaw("Vertical"));
         inputVector.Normalize();
         inputVector = transform.rotation * inputVector;

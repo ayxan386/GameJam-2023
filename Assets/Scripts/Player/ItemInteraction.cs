@@ -44,6 +44,7 @@ public class ItemInteraction : MonoBehaviour
         if (lastItem != null && Input.GetButtonDown("Fire1"))
         {
             animator.SetTrigger(grabDirection);
+            lastItem.PreUsed();
             StartCoroutine(WaitForAnimation(lastItem));
         }
     }
@@ -68,8 +69,10 @@ public class ItemInteraction : MonoBehaviour
 
     private IEnumerator WaitForAnimation(InteractableItem item)
     {
+        GlobalStateManager.CanMove = false;
         yield return new WaitForSeconds(2f);
         yield return new WaitWhile(() => animator.GetCurrentAnimatorClipInfo(0)[0].clip.name.Contains("Grab"));
         item.OnUsed();
+        GlobalStateManager.CanMove = true;
     }
 }
