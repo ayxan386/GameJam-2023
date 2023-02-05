@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -42,8 +43,8 @@ public class ItemInteraction : MonoBehaviour
 
         if (lastItem != null && Input.GetButtonDown("Fire1"))
         {
-            lastItem.OnUsed();
             animator.SetTrigger(grabDirection);
+            StartCoroutine(WaitForAnimation(lastItem));
         }
     }
 
@@ -63,5 +64,12 @@ public class ItemInteraction : MonoBehaviour
         canGrabbedRef?.SetActive(false);
 
         return false;
+    }
+
+    private IEnumerator WaitForAnimation(InteractableItem item)
+    {
+        yield return new WaitForSeconds(2f);
+        yield return new WaitWhile(() => animator.GetCurrentAnimatorClipInfo(0)[0].clip.name.Contains("Grab"));
+        item.OnUsed();
     }
 }
